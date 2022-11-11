@@ -13,8 +13,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="" element={<MoviesHome />} />
-        <Route path="moviesdetails" element={<MoviesDetails />} />
-        <Route path="login" element={<Login />} />
+{/*         <Route path="moviesdetails" element={<MoviesDetails />} />
+ */}        <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Routes>
     </div>

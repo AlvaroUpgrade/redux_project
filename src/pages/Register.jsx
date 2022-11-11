@@ -1,6 +1,7 @@
 import React from "react";
 import "./Register.scss";
 import { useForm } from "react-hook-form";
+import ReusableButton from "../components/ReusableButton";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
@@ -42,7 +43,11 @@ const Register = () => {
           })}
         />
       </label>
-      <button>Enviar</button>
+     
+      <ReusableButton size="l" color="white" text="ENVIAR">
+      </ReusableButton>
+     
+        
     </form>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Login.scss"
 import { useForm } from "react-hook-form";
+import ReusableButton from '../components/ReusableButton';
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -23,7 +24,8 @@ const Login = () => {
         Password
         <input type="password" {...register("password", { required: true })} />
       </label>
-      <button>Enviar</button>
+      <ReusableButton size="l" color="white" text="ENVIAR">
+      </ReusableButton>
     </form>
   );
 };

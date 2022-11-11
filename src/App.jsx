@@ -1,15 +1,22 @@
-
-import './App.scss';
-import { Route, Routes, useNavigate } from 'react-router-dom';
-import Navbar from './components/Navbar';
-
+import "./App.scss";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import MoviesHome from "./pages/MoviesHome";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import MoviesDetails from "./pages/MoviesDetails";
 
 function App() {
   return (
     <div className="App">
-     HELLO HELL
-     <Navbar/>
-
+      HELLO HELL
+      <Navbar />
+      <Routes>
+        <Route path="" element={<MoviesHome />} />
+        <Route path="moviesdetails" element={<MoviesDetails />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
     </div>
   );
 }

@@ -5,8 +5,10 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      Navbar
-      <NavLink to="movies" activeclassname={"active"}>
+      <NavLink to="" activeclassname={"active"}>
+        Movies
+      </NavLink>
+      <NavLink to="moviesdetails" activeclassname={"active"}>
         Movies
       </NavLink>
       <NavLink to="login" activeclassname={"active"}>

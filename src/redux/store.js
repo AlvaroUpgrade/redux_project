@@ -6,6 +6,7 @@ import moviesReducer from "./movies/movies.reducer";
 
 const rootReducer = combineReducers({
     movies: moviesReducer,
+    auth: authReducer
 })
 
 const store = createStore( rootReducer, composeWithDevTools(applyMiddleware(thunk)));

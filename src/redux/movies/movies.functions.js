@@ -1,4 +1,6 @@
 import axios from "axios";
+import { API } from "../../shared/services/api";
+
 
 export const getMovies = () => async(dispatch) =>{
     dispatch({type: 'gettingMovies'});
@@ -12,6 +14,17 @@ export const getMovies = () => async(dispatch) =>{
     }
 };
 
-export const postMovies = () => async(dispatch) => {};
+export const postMovies = () => async(dispatch) => {
+ /*    try {
+        const result = await API.post("movies/create", formdata);
+    dispatch({ type: "register_user_ok" });
+    console.log(resultado);
+    navigate("/login");
+  } catch (error) {
+    dispatch({ type: "register_user_error" });
+    } */
+};
 
-export const putMovies = () => async(dispatch) => {};
+export const putMovies = () => async(dispatch) => {
+    
+};

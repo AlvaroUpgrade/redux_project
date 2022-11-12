@@ -5,15 +5,12 @@ import { NavLink } from "react-router-dom";
 import ButtonLogout from "./ButtonLogout";
 
 const Navbar = () => {
-  const { user, token } = useSelector((state) => state.auth);
+  const { user, token } = useSelector((state) => state.auth)
   return (
     <nav>
       <NavLink to="" activeclassname={"active"}>
         Movies
       </NavLink>
-      {/*   <NavLink to="moviesdetails" activeclassname={"active"}>
-        Movies
-      </NavLink> */}
       {!user && (
         <>
           <NavLink to="login" activeclassname={"active"}>

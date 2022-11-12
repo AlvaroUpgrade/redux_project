@@ -26,9 +26,14 @@ export const loginUser = (formdata, navigate) => async (dispatch) => {
 };
 
 export const checkSession = (token, navigate) => async (dispatch) => {
+  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL DISPATCH")
   dispatch({ type: "checkSession_start" });
+  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL TRY")
   try {
+    console.log("ESTOY DENTRO DEL TRY")
+
     const result = await API.post("users/checksession");
+    console.log("SACANDO RESULT", result);
     dispatch({
       type: "checkSession_ok",
       payload: { user: result.data, token: token },

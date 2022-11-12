@@ -19,8 +19,7 @@ export const loginUser = (formdata, navigate) => async (dispatch) => {
     console.log(result);
     dispatch({ type: "login_user_ok", payload: result.data });
     localStorage.setItem("token", result.data.token);
-    //!
-    navigate("");
+    navigate("/");
   } catch (error) {
     dispatch({ type: "login_user_error", payload: error.message });
   }
@@ -39,7 +38,7 @@ export const checkSession = (token, navigate) => async (dispatch) => {
     navigate("/");
   } catch (error) {
     dispatch({ type: "checkSession_error" });
-    localStorage.remove("token");
+    localStorage.removeItem("token");
     localStorage.clear();
     navigate("/login");
   }

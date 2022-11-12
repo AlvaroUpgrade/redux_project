@@ -1,26 +1,39 @@
 import React from "react";
 import "./Navbar.scss";
 import { NavLink } from "react-router-dom";
-import ReusableButton from "./ReusableButton";
+import ButtonLogout from "./ButtonLogout";
+import {useSelector} from 'react-redux';
 
 const Navbar = () => {
+  const {user, token} = useSelector(state=>state.auth)
   return (
-    <div>
+    <nav>
       <NavLink to="" activeclassname={"active"}>
         Movies
       </NavLink>
     {/*   <NavLink to="moviesdetails" activeclassname={"active"}>
         Movies
       </NavLink> */}
+      {!user &&
+      <>
       <NavLink to="login" activeclassname={"active"}>
         Login
       </NavLink>
       <NavLink to="register" activeclassname={"active"}>
         Register
       </NavLink>
-      <ReusableButton size="l" color="white" text="LOG OUT">
-      </ReusableButton>
-    </div>
+      </>
+      }
+      {
+        user &&
+        <>
+        <NavLink to="/" activeclassname={"active"}>Movies</NavLink>
+        <NavLink to="addmovies" activeclassname={"active"}>Add Movies</NavLink>
+      <ButtonLogout/>
+        </>
+      }
+      
+    </nav>
   );
 };
 

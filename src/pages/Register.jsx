@@ -57,12 +57,12 @@ const Register = () => {
           type="password" name="pasword"
           {...register("password", {
             required: "Escribe un pasword, por favor",
-            pattern:
-              /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/,
+            //pattern:
+              // /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/,
           })}
         />
       </label>
-      {errors.pasword ? <p>El password no es correcto</p> : null}
+      {errors.password ? <p>El password no es correcto</p> : null}
 
       <ReusableButton size="l" color="white" text="ENVIAR" disabled={!isValid}></ReusableButton>
     </form>

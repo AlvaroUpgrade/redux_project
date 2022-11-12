@@ -1,8 +1,8 @@
 import React from "react";
 import "./Navbar.scss";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import ButtonLogout from "./ButtonLogout";
-import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { user, token } = useSelector((state) => state.auth);
@@ -26,10 +26,10 @@ const Navbar = () => {
       )}
       {user && (
         <>
-          <NavLink to="/" activeclassname={"active"}>
-            Movies
+          <NavLink to="moviesdetails" activeclassname={"active"}>
+            Movies Details
           </NavLink>
-          <NavLink to="addmovies" activeclassname={"active"}>
+          <NavLink to="addmovie" activeclassname={"active"}>
             Add Movies
           </NavLink>
           <ButtonLogout />

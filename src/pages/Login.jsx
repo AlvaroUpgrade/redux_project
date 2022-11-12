@@ -13,7 +13,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm();
-  console.log(process.env.REACT_APP_BACK_URL);
+  // console.log(process.env.REACT_APP_BACK_URL);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -32,7 +32,7 @@ const Login = () => {
             required: "Introduce un email, por favor",
             minLength: {
               value: 2,
-              message: "El email tiene que ser más largo"
+              message: "El email tiene que ser más largo",
             },
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
@@ -50,15 +50,21 @@ const Login = () => {
       ) : null}
       <label>
         Password
-        <input 
-        type="password"
-        name="password" 
-        {...register("password", { 
-          required: "El password tiene que existir",
-           })} />
+        <input
+          type="password"
+          name="password"
+          {...register("password", {
+            required: "El password tiene que existir",
+          })}
+        />
       </label>
       {errors.password ? <p>El password no es correcto</p> : null}
-      <ReusableButton size="l" color="white" text="ENVIAR" disabled={!isValid}></ReusableButton>
+      <ReusableButton
+        size="l"
+        color="white"
+        text="ENVIAR"
+        disabled={!isValid}
+      ></ReusableButton>
     </form>
   );
 };

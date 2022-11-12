@@ -21,9 +21,9 @@ const authReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         isLoading: false,
-        user: action.payload.user,
-        token: action.payload.token,
-        error: false,
+        user: null,
+        token: null,
+        error: action.payload,
       };
     case "register_user_start":
       return {
@@ -54,7 +54,7 @@ const authReducer = (state = INITIAL_STATE, action) => {
     case "logout_user_error":
       return {
         ...state,
-        isLoading: true,
+        isLoading: false,
         error: action.payload,
       };
     case "checkSession_start":

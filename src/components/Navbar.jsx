@@ -4,8 +4,14 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import ButtonLogout from "./ButtonLogout";
 
+//cuando hago login no aparecen Add Movies ni LogoutButton
+//refresh navegador, aparecen los dos componentes logoutbutton y addmovies
+//cuando clicko logout, no aparecen login ni register
+//refresh navegador, aparecen login y register
+
 const Navbar = () => {
-  const { user, token } = useSelector((state) => state.auth)
+  const { user, token } = useSelector((state) => state.auth);
+  //de donde sacan el user?
   return (
     <nav>
       <NavLink to="" activeclassname={"active"}>
@@ -23,9 +29,6 @@ const Navbar = () => {
       )}
       {user && (
         <>
-          <NavLink to="moviesdetails" activeclassname={"active"}>
-            Movies Details
-          </NavLink>
           <NavLink to="addmovie" activeclassname={"active"}>
             Add Movies
           </NavLink>

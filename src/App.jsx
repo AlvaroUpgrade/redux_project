@@ -9,8 +9,8 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
  import { checkSession } from "./redux/auth/auth.actions";
  import AddMovie from "./pages/AddMovie";
-/* import AuthRoute from './components/AuthRoute';
- */ 
+import AuthRoute from './components/AuthRoute';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="" element={<MoviesHome />} />
         <Route path="moviesdetails" element={<MoviesDetails />} />
-        <Route path="addmovie" element={<AddMovie />} />
+        <Route path="addmovie" element={<AuthRoute component={<AddMovie />}/>} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Routes>

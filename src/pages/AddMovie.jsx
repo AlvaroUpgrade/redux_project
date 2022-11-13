@@ -8,11 +8,11 @@ const AddMovie = () => {
   const sendForm = (formularyData) => {
     const formData = new FormData();
     formData.append("title", formularyData.title);
-    formData.append("director", formularyData.title);
-    formData.append("year", formularyData.title);
-    formData.append("genre", formularyData.title);
-    formData.append("description", formularyData.title);
-    formData.append("image", formularyData.title);
+    formData.append("director", formularyData.director);
+    formData.append("year", formularyData.year);
+    formData.append("genre", formularyData.genre);
+    formData.append("description", formularyData.description);
+    formData.append("image", formularyData.image[0]);
 
     console.log(formularyData);
   };

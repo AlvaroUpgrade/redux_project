@@ -5,7 +5,7 @@ import ReusableButton from "../components/ReusableButton";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../redux/auth/auth.actions";
-import { API } from "../shared/services/api";
+// import { API } from "../shared/services/api";
 
 const Login = () => {
   const {
@@ -61,7 +61,6 @@ const Login = () => {
       {errors.password ? <p>El password no es correcto</p> : null}
       <ReusableButton
         size="l"
-        color="#4CAF50"
         text="ENVIAR"
         disabled={!isValid}
       ></ReusableButton>

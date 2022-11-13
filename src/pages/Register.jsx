@@ -64,7 +64,7 @@ const Register = () => {
       </label>
       {errors.password ? <p>El password no es correcto</p> : null}
 
-      <ReusableButton size="l" color="#45a049" text="ENVIAR" disabled={!isValid}></ReusableButton>
+      <ReusableButton size="l"  text="ENVIAR" disabled={!isValid}></ReusableButton>
     </form>
   );
 };

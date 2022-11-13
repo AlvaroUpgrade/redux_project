@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { newUser } from "../redux/auth/auth.actions";
 import ReusableButton from "../components/ReusableButton";
-import { API } from "../shared/services/api";
+// import { API } from "../shared/services/api";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {

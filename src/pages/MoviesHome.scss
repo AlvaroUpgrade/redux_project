@@ -41,7 +41,7 @@
     color: white;
     height: 300px;
     width: 200px;
-    
+
     @include pixel-borders(
       $corner-size: 1,
       $border-size: 3px,
@@ -49,7 +49,6 @@
       $border-inset-color: false
     );
 
- 
     .imageContainer {
       // imagebox el que contiene la carta
       position: relative;
@@ -110,7 +109,6 @@
         padding-bottom: 10px;
         line-height: 1.5em;
       }
-
     }
   }
 
@@ -131,11 +129,9 @@
 @media only screen and (max-width: 485px) {
   .containerMovies {
     //container
-   top: 35%;
-   
+    top: 35%;
   }
 }
-
 
 //maquetado tamaño más pequeño, luego ya haremos en responsive los mediaquery para pantalla
 //para tamaño grande meter un grid

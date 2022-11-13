@@ -9,25 +9,25 @@ const authReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "login_user_start":
       return { ...state, isLoading: true };
-      case "login_user_ok":
-        return {
-          ...state,
-          isLoading: false,
-          user: action.payload.userDB,
-          token: action.payload.token,
-          error: false,
-        };
-        
-        case "login_user_error":
-          return {
-            ...state,
-            isLoading: false,
-            user: null,
-            token: null,
-            error: action.payload,
-          };
-          case "register_user_start":
-            return {
+    case "login_user_ok":
+      return {
+        ...state,
+        isLoading: false,
+        user: action.payload.userDB,
+        token: action.payload.token,
+        error: false,
+      };
+
+    case "login_user_error":
+      return {
+        ...state,
+        isLoading: false,
+        user: null,
+        token: null,
+        error: action.payload,
+      };
+    case "register_user_start":
+      return {
         ...state,
         isLoading: true,
       };
@@ -66,7 +66,7 @@ const authReducer = (state = INITIAL_STATE, action) => {
         isLoading: true,
       };
     case "checkSession_ok":
-      console.log('CONSOLE LOG AUTH REDUCER', action.payload)
+      console.log("CONSOLE LOG AUTH REDUCER", action.payload);
 
       return {
         ...state,
@@ -79,7 +79,7 @@ const authReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
       };
- 
+
     default:
       return state;
   }

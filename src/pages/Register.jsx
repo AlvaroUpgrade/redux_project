@@ -13,6 +13,7 @@ const Register = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm();
+
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -54,17 +55,22 @@ const Register = () => {
       <label>
         Password
         <input
-          type="password" name="pasword"
+          type="password"
+          name="pasword"
           {...register("password", {
             required: "Escribe un pasword, por favor",
             //pattern:
-              // /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/,
+            // /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/,
           })}
         />
       </label>
       {errors.password ? <p>El password no es correcto</p> : null}
 
-      <ReusableButton size="l"  text="ENVIAR" disabled={!isValid}></ReusableButton>
+      <ReusableButton
+        size="l"
+        text="ENVIAR"
+        disabled={!isValid}
+      ></ReusableButton>
     </form>
   );
 };

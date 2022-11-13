@@ -13,12 +13,10 @@ export const newUser = (formdata, navigate) => async (dispatch) => {
 };
 
 export const loginUser = (formdata, navigate) => async (dispatch) => {
-  console.log("Arriba del dispatch");
   dispatch({ type: "login_user_start" });
   try {
-    console.log("Dentro del TRY");
     const result = await API.post("users/login", formdata);
-    console.log("Result: ", result);
+    // console.log("Result: ", result);
     dispatch({ type: "login_user_ok", payload: result.data });
     localStorage.setItem("token", result.data.token);
     navigate("/");

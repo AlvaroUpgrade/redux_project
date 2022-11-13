@@ -10,14 +10,14 @@ const authReducer = (state = INITIAL_STATE, action) => {
     case "login_user_start":
       return { ...state, isLoading: true };
       case "login_user_ok":
-        console.log('CONSOLE.LOG SANTI', state.user);
         return {
           ...state,
           isLoading: false,
-          user: action.payload.user,
+          user: action.payload.userDB,
           token: action.payload.token,
           error: false,
         };
+        
         case "login_user_error":
           return {
             ...state,
@@ -51,6 +51,8 @@ const authReducer = (state = INITIAL_STATE, action) => {
     case "logout_user_ok":
       return {
         ...state,
+        user: action.payload.userDB,
+        token: action.payload.token,
       };
     case "logout_user_error":
       return {

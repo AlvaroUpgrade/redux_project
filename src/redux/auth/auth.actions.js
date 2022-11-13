@@ -13,10 +13,12 @@ export const newUser = (formdata, navigate) => async (dispatch) => {
 };
 
 export const loginUser = (formdata, navigate) => async (dispatch) => {
+  console.log("Arriba del dispatch");
   dispatch({ type: "login_user_start" });
   try {
+    console.log("Dentro del TRY");
     const result = await API.post("users/login", formdata);
-    console.log(result);
+    console.log("Result: ", result);
     dispatch({ type: "login_user_ok", payload: result.data });
     localStorage.setItem("token", result.data.token);
     navigate("/");
@@ -26,11 +28,11 @@ export const loginUser = (formdata, navigate) => async (dispatch) => {
 };
 
 export const checkSession = (token, navigate) => async (dispatch) => {
-  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL DISPATCH")
+  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL DISPATCH");
   dispatch({ type: "checkSession_start" });
-  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL TRY")
+  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL TRY");
   try {
-    console.log("ESTOY DENTRO DEL TRY")
+    console.log("ESTOY DENTRO DEL TRY");
 
     const result = await API.post("users/checksession");
     console.log("SACANDO RESULT", result);
@@ -52,8 +54,11 @@ export const checkSession = (token, navigate) => async (dispatch) => {
 export const logoutUser = (navigate) => async (dispatch) => {
   dispatch({ type: "logout_user_start" });
   try {
-    dispatch({ type: "logout_user_ok" });
-    localStorage.removeItem("token");
+    dispatch({
+      type: "logout_user_ok",
+      payload: { user: null, token: null },
+    });
+
     localStorage.clear();
     navigate("/login");
   } catch (error) {

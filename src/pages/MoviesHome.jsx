@@ -20,12 +20,15 @@ const MoviesHome = () => {
       ) : !error ? (
         movies.map((movie) => {
           return (
-            <div className="grid">
-            <div className="movie" key={movie._id}>
-              <h3 className="title">{movie.title}</h3>
-              <div className="containImage">
-              <img className="movieImage" src={movie.image} alt={movie.title} />
+            
+            <div className="movieCard" key={movie._id}>
+              
+              <div className="imageContainer">
+              <img className="imageMovie"  src={movie.image} alt={movie.title} />
               </div>
+              <div className="content">
+              <h3 className="title">{movie.title}</h3>
+              <p className="director"> {movie.director}</p>
               <ReusableButton
                 size="l"
                 color="yellow"
@@ -33,7 +36,9 @@ const MoviesHome = () => {
                 className="verMas"
               ></ReusableButton>
               </div>
-            </div>
+              
+              </div>
+           
           );
         })
       ) : (

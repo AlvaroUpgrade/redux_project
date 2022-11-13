@@ -4,9 +4,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   gap: 2em;
   padding: 1em;
+  position:sticky;
 
   .computer {
     height: 5em;

@@ -3,7 +3,7 @@
 .containerMovies {
   //container
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 2%;
   -webkit-transform: translate(-5%, -5%);
   -ms-transform: translate(-5%, -5%);
@@ -22,7 +22,6 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 auto;
-
   gap: 20px;
 
   .imageLoading {

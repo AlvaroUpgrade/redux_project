@@ -1,33 +1,91 @@
-.containerMovies{
-    margin:0px;
-    padding:0px;
-    width:100%;
+.containerMovies {
+    width: 80%;
+  border: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f76564;
+//   margin: 0;
+//   padding: 0px;
+//   width: 100%;
+//   font-family: Pixel;
+//   background-color: rgb(85, 0, 255);
+//   display: grid;
+//   grid-template-columns: auto auto auto;
+//   grid-template-rows: 50% 50%;
+//   column-gap: 1em;
+//   box-sizing: border-box;
+//   overflow: inherit;
+//   flex-wrap: wrap;
+  .imageLoading {
+    width: 300px;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  .movie {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: palevioletred;
+
+    .containImage {
+      width: 15em;
+      max-width: 960px;
+      margin: 0 auto;
+      .movieImage {
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+      }
+    }
+
+    .title {
+      padding-top: 1em;
+      font-size: large;
+      color: black;
+    }
+    .verMas {
+      color: black;
+    }
+  }
+}
+}
+@media only screen and (max-width: 756px) {
+  .containerMovies {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
     font-family: Pixel;
 
-    .imageLoading{
-        width: 300px;
+    .imageLoading {
+      width: 300px;
     }
-    
-    .movie {
-        width:100%;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .movieImage {
-            width: 100%;
-            padding: 0.5em;
-        }
-        .title{
-            padding-top: 1em;
-            font-size: large;
-            color:black;
-        }
-        .verMas{
-            color: black;
-        }
 
+    .movie {
+      width: 100%;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .movieImage {
+        width: 100%;
+        padding: 0.5em;
+      }
+      .title {
+        padding-top: 1em;
+        font-size: large;
+        color: black;
+      }
+      .verMas {
+        color: black;
+      }
     }
+  }
 }
 //maquetado tamaño más pequeño, luego ya haremos en responsive los mediaquery para pantalla
 //para tamaño grande meter un grid

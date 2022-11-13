@@ -1,7 +1,9 @@
+@import "node_modules/pixel-borders/src/styles/pixel-borders/pixel-borders-mixins";
+
 .containerMovies {
   //container
   position: absolute;
-  top: 21%;
+  top: 25%;
   left: 2%;
   -webkit-transform: translate(-5%, -5%);
   -ms-transform: translate(-5%, -5%);
@@ -20,8 +22,8 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 auto;
-  
-  gap:20px;
+
+  gap: 20px;
 
   .imageLoading {
     width: 300px;
@@ -31,10 +33,7 @@
     // card tajeta general
     position: relative;
     background: #000;
-    /*     background-image: url('../../images.jpg');
- */
     overflow: hidden;
-    border-radius: 5px;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -43,7 +42,15 @@
     color: white;
     height: 300px;
     width: 200px;
+    
+    @include pixel-borders(
+      $corner-size: 1,
+      $border-size: 3px,
+      $border-color: #000,
+      $border-inset-color: false
+    );
 
+ 
     .imageContainer {
       // imagebox el que contiene la carta
       position: relative;
@@ -90,11 +97,12 @@
       flex-direction: column;
       align-items: center;
 
-
       .title {
         text-align: center;
         margin-bottom: 8%;
         font-weight: bold;
+        font-size: 25px;
+        color: yellow;
       }
 
       .director {
@@ -104,9 +112,6 @@
         line-height: 1.5em;
       }
 
-      .verMas {
-        color: black;
-      }
     }
   }
 
@@ -127,37 +132,11 @@
 @media only screen and (max-width: 485px) {
   .containerMovies {
     //container
-    position: absolute;
-
-    top: 35%;
-    left: 2%;
-    -webkit-transform: translate(-5%, -5%);
-    -ms-transform: translate(-5%, -5%);
-    transform: translate(0%, 0%);
-    width: 100%;
-    max-width: 95%;
-    height: 100%;
-    //   display: -webkit-box;
-    //   display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: flex-start;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-    margin: 0 auto;
+   top: 35%;
+   
   }
 }
 
-@media only screen and (max-width: 485px) {
-  .containerMovies {
-    //container
-    position: absolute;
-    top: 30%;
-  }
-}
+
 //maquetado tamaño más pequeño, luego ya haremos en responsive los mediaquery para pantalla
 //para tamaño grande meter un grid

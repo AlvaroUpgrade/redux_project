@@ -1,11 +1,20 @@
+@import "node_modules/pixel-borders/src/styles/pixel-borders/pixel-borders-mixins";
+
 button{
   width: 100px;
-  background-color: white;
-  color: #4CAF50;
-  padding: 14px 20px;
+  background-color: yellow;
+  color: black;
+  padding: 10px 15px;
   margin: 8px 0;
-  border: none;
-  border-radius: 4px;
+ 
+  font-weight: bold;
+  font-size: 15px;
+  @include pixel-borders(
+  $corner-size: 1,
+  $border-size: 4px,
+  $border-color: yellow,
+  $border-inset-color: false
+);
   cursor: pointer;
   font-family: pixel;
 }

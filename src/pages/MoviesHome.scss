@@ -1,8 +1,8 @@
 .containerMovies {
   //container
   position: absolute;
- 
-  top: 15%;
+
+  top: 17%;
   left: 2%;
   -webkit-transform: translate(-5%, -5%);
   -ms-transform: translate(-5%, -5%);
@@ -10,17 +10,17 @@
   width: 100%;
   max-width: 95%;
   height: 100%;
-//   display: -webkit-box;
-//   display: -ms-flexbox;
+  //   display: -webkit-box;
+  //   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items:flex-start;
+  align-items: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  
+
   margin: 0 auto;
 
   .imageLoading {
@@ -80,36 +80,31 @@
   }
 }
 
-@media only screen and (max-width: 756px) {
+@media only screen and (max-width: 485px) {
   .containerMovies {
-    margin: 0px;
-    padding: 0px;
+    //container
+    position: absolute;
+
+    top: 25%;
+    left: 2%;
+    -webkit-transform: translate(-5%, -5%);
+    -ms-transform: translate(-5%, -5%);
+    transform: translate(0%, 0%);
     width: 100%;
-    font-family: Pixel;
+    max-width: 95%;
+    height: 100%;
+    //   display: -webkit-box;
+    //   display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 
-    .imageLoading {
-      width: 300px;
-    }
-
-    .movie {
-      width: 100%;
-      flex-direction: column;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .movieImage {
-        width: 100%;
-        padding: 0.5em;
-      }
-      .title {
-        padding-top: 1em;
-        font-size: large;
-        color: black;
-      }
-      .verMas {
-        color: black;
-      }
-    }
+    margin: 0 auto;
   }
 }
 //maquetado tamaño más pequeño, luego ya haremos en responsive los mediaquery para pantalla

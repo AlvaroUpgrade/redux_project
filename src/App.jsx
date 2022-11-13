@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
  import { checkSession } from "./redux/auth/auth.actions";
  import AddMovie from "./pages/AddMovie";
 import AuthRoute from './components/AuthRoute';
-
+import Header from "./components/Header";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,7 +21,8 @@ function App() {
   }, []);
   return (
     <div className="App">
-      HELLO HELL
+      <Header/>
+      
       <Navbar/>
       <Routes>
         <Route path="" element={<MoviesHome />} />

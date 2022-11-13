@@ -1,4 +1,5 @@
 import React from "react";
+import "./ReusableButton.scss";
 
 const ReusableButton = ({ size, text, color }) => {
   return (

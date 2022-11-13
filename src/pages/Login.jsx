@@ -61,7 +61,7 @@ const Login = () => {
       {errors.password ? <p>El password no es correcto</p> : null}
       <ReusableButton
         size="l"
-        color="white"
+        color="#4CAF50"
         text="ENVIAR"
         disabled={!isValid}
       ></ReusableButton>

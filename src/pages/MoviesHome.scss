@@ -1,0 +1,33 @@
+.containerMovies{
+    margin:0px;
+    padding:0px;
+    width:100%;
+    font-family: Pixel;
+
+    .imageLoading{
+        width: 300px;
+    }
+    
+    .movie {
+        width:100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .movieImage {
+            width: 100%;
+            padding: 0.5em;
+        }
+        .title{
+            padding-top: 1em;
+            font-size: large;
+            color:black;
+        }
+        .verMas{
+            color: black;
+        }
+
+    }
+}
+//maquetado tamaño más pequeño, luego ya haremos en responsive los mediaquery para pantalla
+//para tamaño grande meter un grid

@@ -32,7 +32,7 @@ const Navbar = () => {
           <NavLink to="addmovie" activeclassname={"active"}>
             Add Movies
           </NavLink>
-          <ButtonLogout />
+          <ButtonLogout className="logoutButton"/>
         </>
       )}
     </nav>

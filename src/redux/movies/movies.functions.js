@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API } from "../../shared/services/api";
+import { API, API2 } from "../../shared/services/api";
 
 export const getMovies = () => async (dispatch) => {
   dispatch({ type: "gettingMovies" });
@@ -16,10 +16,10 @@ export const getMovies = () => async (dispatch) => {
 export const newMovie = (formdata, navigate) => async (dispatch) => {
   dispatch({ type: "postingMovie" });
   try {
-    console.log(formdata)
-    const result = await API.post("movies/create", formdata);
+    // console.log(formdata)
+    const result = await API2.post("movies/create", formdata);
     console.log(result);
-    dispatch({ type: "postMovie" });
+    dispatch({ type: "postMovie", payload: result.data });
     navigate("/");
   } catch (error) {
     dispatch({ type: "errorPostingMovie" });

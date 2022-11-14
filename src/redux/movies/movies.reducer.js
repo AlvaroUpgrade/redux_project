@@ -5,6 +5,8 @@ const INITIAL_STATE = {
 };
 
 const moviesReducer = (state = INITIAL_STATE, action) => {
+  const myMovies = state.movies;
+
   switch (action.type) {
     case "gettingMovies":
       return {
@@ -36,6 +38,7 @@ const moviesReducer = (state = INITIAL_STATE, action) => {
     case "postMovie":
       return {
         ...state,
+        movies: [...myMovies, action.payload],
         isLoading: false,
         error: false,
       };

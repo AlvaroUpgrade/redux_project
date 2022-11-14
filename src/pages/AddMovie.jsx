@@ -15,21 +15,19 @@ const AddMovie = () => {
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const postMovie = async (formdata) => {
-    dispatch(newMovie(formdata, navigate))
+  const postMovie = async (datos) => {
+    const formData = new FormData();
+    formData.append("title", datos.title);
+    formData.append("director", datos.director);
+    formData.append("year", datos.year);
+    formData.append("genre", datos.genre);
+    formData.append("description", datos.description);
+    formData.append("image", datos.image[0]);
+    
+    dispatch(newMovie(formData, navigate))
   }
 
-  // const sendForm = (formularyData) => {
-  //   const formData = new FormData();
-  //   formData.append("title", formularyData.title);
-  //   formData.append("director", formularyData.director);
-  //   formData.append("year", formularyData.year);
-  //   formData.append("genre", formularyData.genre);
-  //   formData.append("description", formularyData.description);
-  //   formData.append("image", formularyData.image[0]);
-
-  //   console.log(formularyData);
-  // };
+  
   return (
     <form onSubmit={handleSubmit(postMovie)}>
       <label>

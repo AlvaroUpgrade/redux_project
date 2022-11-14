@@ -50,9 +50,7 @@ const authReducer = (state = INITIAL_STATE, action) => {
       };
     case "logout_user_ok":
       return {
-        ...state,
-        user: action.payload.userDB,
-        token: action.payload.token,
+        ...INITIAL_STATE,
       };
     case "logout_user_error":
       return {

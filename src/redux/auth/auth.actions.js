@@ -54,7 +54,6 @@ export const logoutUser = (navigate) => async (dispatch) => {
   try {
     dispatch({
       type: "logout_user_ok",
-      payload: { user: null, token: null },
     });
 
     localStorage.clear();

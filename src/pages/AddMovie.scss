@@ -13,6 +13,12 @@ form {
     height: 500px;
     width: 400px;
     font-family: pixel;
+    @include pixel-borders(
+        $corner-size: 1,
+        $border-size: 3px,
+        $border-color: yellow,
+        $border-inset-color: false
+      );
 
     input{
         font-family: pixel;

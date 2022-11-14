@@ -15,17 +15,9 @@
 
   main {
     width: 100%;
-    min-height: 61vh;
+    min-height: 64vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-  }
-
-  .footer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-self: flex-end;
-    height: 15vh;
   }
 }

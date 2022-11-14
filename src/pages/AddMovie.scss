@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //  width: 100%;
+    border-radius: 5px;
+    //  background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px;
+    justify-content: space-between;
+    height: 500px;
+    width: 400px;
+    font-family: pixel;
+
+    input{
+        font-family: pixel;
+    }
+
+    .inputImage{
+        font-family: pixel;
+        color: red;
+    }
+}

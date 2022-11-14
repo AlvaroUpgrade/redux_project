@@ -8,7 +8,8 @@ header {
   gap: 2em;
   // margin-top: 1em;
   // padding: 1px;
-  height: 11.5vh;
+  height: 15vh;
+  align-items: center;
 
   .computer {
     height: 5em;
@@ -40,9 +41,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em;
     box-sizing: border-box;
-    gap: 0;
+    height: 25vh;
+
 
     .computer {
       height: 5em;

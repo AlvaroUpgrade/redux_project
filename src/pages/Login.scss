@@ -7,18 +7,27 @@ form {
   //  background-color: #f2f2f2;
   padding: 20px;
   margin: 20px;
+  background-color: pink;
+  justify-content: space-between;
+  height: 300px;
+  width: 400px;
 
   label {
     color: black;
     font-weight: bold;
+    font-size: large;
+
     input {
-      width: 30%;
+      width: 350px;
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
+      font-family: pixel;
+
+      
     }
     input::hover {
       background-color: #45a049;

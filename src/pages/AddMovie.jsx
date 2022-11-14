@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { newMovie } from "../redux/movies/movies.functions"
 import { useNavigate } from "react-router-dom";
 import ReusableButton from "../components/ReusableButton";
-
+import "./AddMovie.scss"
 const AddMovie = () => {
   const {
     register,
@@ -44,7 +44,7 @@ const AddMovie = () => {
       </label>
       <label>
         Image
-        <input type="file" {...register("image", { required: true })} />
+        <input className="inputImage" type="file" {...register("image", { required: true })} />
       </label>
       {/* <label>
         Genre

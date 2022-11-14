@@ -21,15 +21,22 @@ form {
   label {
     color: black;
     font-weight: bold;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+
     
     input {
-      width: 100%;
+      width: 350px;
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
       border: 1px solid rgb(22, 2, 2);
       border-radius: 4px;
       box-sizing: border-box;
+      font-family: pixel;
+      text-align: center;
+
       @include pixel-borders(
         $corner-size: 1,
         $border-size: 3px,

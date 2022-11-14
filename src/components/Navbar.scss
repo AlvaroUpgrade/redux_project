@@ -1,14 +1,25 @@
 nav {
   font-family: pixel;
-  gap: 20px;
+  gap: 10em;
   display: flex;
   justify-content:space-evenly;
   align-items: center;
-  padding: 2vh;
   font-size: 20px;
   height: 8vh;
   a {
     text-decoration: none;
     color: green;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  nav{
+    gap: 3em;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  nav{
+    gap: 1.5em;
   }
 }

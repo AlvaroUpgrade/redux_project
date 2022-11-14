@@ -22,7 +22,7 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(registerUser)}>
+    <form className= "registerForm" onSubmit={handleSubmit(registerUser)}>
       <label>
         User name
         <input type="text" {...register("userName", { required: true })} />

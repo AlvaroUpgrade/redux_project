@@ -1,3 +1,5 @@
+@import "node_modules/pixel-borders/src/styles/pixel-borders/pixel-borders-mixins";
+
 form {
     display: flex;
     flex-direction: column;
@@ -14,10 +16,37 @@ form {
 
     input{
         font-family: pixel;
+       
     }
-
     .inputImage{
-        font-family: pixel;
-        color: red;
+        border:none;
+     
+     
+
+       
     }
+    .inputImage:hover{
+    background-color: white;
+    
+    }
+    .inputImage::file-selector-button{
+        font-family: pixel;
+        font-size: 14px;
+        color: black;
+      background-color: yellow;
+     
+     
+      @include pixel-borders(
+        $corner-size: 1,
+        $border-size: 3px,
+        $border-color: yellow,
+        $border-inset-color: false
+      );
+
+    }
+  
 }
+// #file-upload-button{
+//     background-color: aqua; 
+//     font-family:pixel;
+//  }

@@ -22,7 +22,7 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(login)}>
+    <form className="loginForm" onSubmit={handleSubmit(login)}>
       <label>
         Email
         <input
@@ -59,11 +59,12 @@ const Login = () => {
         />
       </label>
       {errors.password ? <p>El password no es correcto</p> : null}
-      <ReusableButton
+      <ReusableButton className='buttonLogin'
         size="l"
-        text="ENVIAR"
+        text="Enviar"
         disabled={!isValid}
       ></ReusableButton>
+      {/* <img className='catImg' src="https://thumbs.gfycat.com/BouncyWelcomeGrassspider-max-1mb.gif" alt="cat"/> */}
     </form>
   );
 };

@@ -43,8 +43,8 @@ const AddMovie = () => {
         <input type="text" {...register("year", { required: false })} />
       </label>
       <label>
-        Image
-        <input className="inputImage" type="file" {...register("image", { required: true })} />
+       
+        <input className="inputImage" type="file" id="specialInput"  {...register("image", { required: true })} />
       </label>
       {/* <label>
         Genre
@@ -54,7 +54,7 @@ const AddMovie = () => {
         Description
         <input type="text" {...register("description", { required: false })} />
       </label>
-      <ReusableButton size="l" color="white" text="ENVIAR" disable={!isValid}></ReusableButton>
+      <ReusableButton size="l" color="yellow" text="Enviar" disable={!isValid}></ReusableButton>
     </form>
   );
 };

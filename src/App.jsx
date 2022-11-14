@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
  import AddMovie from "./pages/AddMovie";
 import AuthRoute from './components/AuthRoute';
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,16 +22,22 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Header/>
-      
+    {/* pageContainer */}
+      <Header/>  
       <Navbar/>
+      <main>
       <Routes>
-        <Route path="" element={<MoviesHome />} />
+        <Route path="" element={<MoviesHome />} className="allMovies" />
         <Route path="moviesdetails" element={<MoviesDetails />} />
         <Route path="addmovie" element={<AuthRoute component={<AddMovie />}/>} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Routes>
+      </main>
+      
+      <Footer/>
+      
+    
     </div>
   );
 }

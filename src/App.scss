@@ -1,16 +1,32 @@
 @import "./Reset.scss";
 
-
 @font-face {
   font-family: "Pixel";
   src: url("../ark-pixel-font-10px-monospaced-woff2-v2022.11.11/ark-pixel-10px-monospaced-ja.woff2")
     format("woff2");
-} 
+}
 
 .App {
   text-align: center;
   display: flex;
   flex-direction: column;
-  
-}
+  align-items: center;
+  min-height: 100vw;
+ 
+  main {
+    width: 100%;
+    min-height: 66vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .allMovies {
+    }
+  }
 
+  .footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+  }
+}

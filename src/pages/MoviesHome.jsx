@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 /* import axios from "axios";
  */ import { useDispatch, useSelector } from "react-redux";
+import Footer from "../components/Footer";
 import ReusableButton from "../components/ReusableButton";
 import { getMovies } from "../redux/movies/movies.functions";
 import "./MoviesHome.scss";
@@ -50,6 +51,7 @@ const MoviesHome = () => {
           <h2>{error}</h2>
         </div>
       )}
+
     </div>
   );
 };

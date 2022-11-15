@@ -24,8 +24,8 @@ const Login = () => {
   return (
     <form className="loginForm" onSubmit={handleSubmit(login)}>
       <label>
-        Email
-        <input
+       <h6>Email</h6> 
+        <input 
           type="text"
           name="email"
           {...register("email", {
@@ -49,7 +49,7 @@ const Login = () => {
         </>
       ) : null}
       <label>
-        Password
+       <h6>Password</h6> 
         <input
           type="password"
           name="password"

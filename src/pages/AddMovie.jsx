@@ -30,19 +30,19 @@ const AddMovie = () => {
   
   return (
     <form onSubmit={handleSubmit(postMovie)}>
-      <label>
-        Title
+      <label className="labelAddMovie">
+        <p className="">Title</p>
         <input type="text" {...register("title", { required: true })} />
       </label>
-      <label>
-        Director
+      <label className="labelAddMovie">
+       <p>Director</p> 
         <input type="text" {...register("director", { required: false })} />
       </label>
-      <label>
-        Year
+      <label className="labelAddMovie">
+       <p>Year</p> 
         <input type="text" {...register("year", { required: false })} />
       </label>
-      <label>
+      <label className="labelAddMovie">
        
         <input className="inputImage" type="file" id="specialInput"  {...register("image", { required: true })} />
       </label>
@@ -50,8 +50,8 @@ const AddMovie = () => {
         Genre
         <input type="text" {...register("genre")} />
       </label> */}
-      <label>
-        Description
+      <label className="labelAddMovie">
+       <p>Description</p> 
         <input type="text" {...register("description", { required: false })} />
       </label>
       <ReusableButton size="l" color="yellow" text="Enviar" disable={!isValid}></ReusableButton>

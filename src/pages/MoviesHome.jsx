@@ -35,7 +35,9 @@ const MoviesHome = () => {
               </div>
               <div className="content">
                 <h3 className="title">{movie.title}</h3>
+                <p className="director"> Year: {movie.year}</p>
                 <p className="director"> Director: {movie.director}</p>
+                <p className="director"> Description: {movie.description}</p>
                 <ReusableButton
                   size="l"
                   color="yellow"

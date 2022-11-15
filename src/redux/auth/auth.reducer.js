@@ -64,8 +64,6 @@ const authReducer = (state = INITIAL_STATE, action) => {
         isLoading: true,
       };
     case "checkSession_ok":
-      console.log("CONSOLE LOG AUTH REDUCER", action.payload);
-
       return {
         ...state,
         isLoading: false,

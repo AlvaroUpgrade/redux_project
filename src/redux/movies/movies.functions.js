@@ -6,7 +6,7 @@ export const getMovies = () => async (dispatch) => {
 
   try {
     const result = await axios.get("https://back-grupo-cea.vercel.app/movies");
-    console.log("RESULT EN MOOVIES FUNCTION", result);
+    // console.log("RESULT EN MOOVIES FUNCTION", result);
     dispatch({ type: "getMovies", payload: result.data });
   } catch (error) {
     dispatch({ type: "errorMovies", payload: error.message });
@@ -18,7 +18,7 @@ export const newMovie = (formdata, navigate) => async (dispatch) => {
   try {
     // console.log(formdata)
     const result = await API2.post("movies/create", formdata);
-    console.log(result);
+    
     dispatch({ type: "postMovie", payload: result.data });
     navigate("/");
   } catch (error) {

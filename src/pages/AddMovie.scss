@@ -1,73 +1,64 @@
 @import "node_modules/pixel-borders/src/styles/pixel-borders/pixel-borders-mixins";
 
 form {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-   
-    //  width: 100%;
-    border-radius: 5px;
-    //  background-color: #f2f2f2;
-    padding: 10px 15px;
-    margin: 8px 0 ;
-    justify-content:space-between;
-    height: 500px;
-    width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //  width: 100%;
+  border-radius: 5px;
+  //  background-color: #f2f2f2;
+  padding: 10px 15px;
+  margin: 8px 0;
+  justify-content: space-between;
+  height: 380px;
+  width: 400px;
+  font-family: pixel;
+  font-size: 15px;
+  background-color: rgb(98, 255, 239);
+  @include pixel-borders(
+    $corner-size: 1,
+    $border-size: 3px,
+    $border-color: yellow,
+    $border-inset-color: false
+  );
+
+  .labelAddMovie {
+    p {
+      padding-bottom: 10px;
+    }
+  }
+  input {
+    padding: 4px 5px;
     font-family: pixel;
-    font-size: 15px;
     @include pixel-borders(
-        $corner-size: 1,
-        $border-size: 3px,
-        $border-color: yellow,
-        $border-inset-color: false
-      );
-
-      .labelAddMovie{
-        p{
-          padding-bottom:10px ;
-      }
-    }
-    input{
-      
-      padding: 4px 5px;
-        font-family: pixel;
-        @include pixel-borders(
-          $corner-size: 1,
-          $border-size: 3px,
-          $border-color: black,
-          $border-inset-color: false
-        );
-  
-    }
-    .inputImage{
-        border:none;
-     
-     
-
-       
-    }
-    .inputImage:hover{
+      $corner-size: 1,
+      $border-size: 3px,
+      $border-color: black,
+      $border-inset-color: false
+    );
+  }
+  .inputImage {
+    border: none;
+  }
+  .inputImage:hover {
     background-color: white;
-    
-    }
-    .inputImage::file-selector-button{
-        font-family: pixel;
-        font-size: 14px;
-        color: black;
-      background-color: yellow;
-     
-     
-      @include pixel-borders(
-        $corner-size: 1,
-        $border-size: 3px,
-        $border-color: yellow,
-        $border-inset-color: false
-      );
+  }
+  .inputImage::file-selector-button {
+    font-family: pixel;
+    font-size: 14px;
+    color: black;
+    background-color: yellow;
 
-    }
-  
+    @include pixel-borders(
+      $corner-size: 1,
+      $border-size: 3px,
+      $border-color: yellow,
+      $border-inset-color: false
+    );
+  }
 }
 // #file-upload-button{
-//     background-color: aqua; 
+//     background-color: aqua;
 //     font-family:pixel;
 //  }

@@ -5,7 +5,7 @@ export const newUser = (formdata, navigate) => async (dispatch) => {
   try {
     const result = await API.post("users/register", formdata);
     dispatch({ type: "register_user_ok" });
-    console.log(result);
+    // console.log(result);
     navigate("/login");
   } catch (error) {
     dispatch({ type: "register_user_error" });
@@ -26,20 +26,20 @@ export const loginUser = (formdata, navigate) => async (dispatch) => {
 };
 
 export const checkSession = (token, navigate) => async (dispatch) => {
-  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL DISPATCH");
+  
   dispatch({ type: "checkSession_start" });
-  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL TRY");
+  
   try {
-    console.log("ESTOY DENTRO DEL TRY");
+    
 
     const result = await API.post("users/checksession");
-    console.log("SACANDO RESULT", result);
+    
     dispatch({
       type: "checkSession_ok",
       payload: { user: result.data, token: token },
     });
     localStorage.setItem("token", token);
-    console.log(result);
+    
     navigate("/");
   } catch (error) {
     dispatch({ type: "checkSession_error" });

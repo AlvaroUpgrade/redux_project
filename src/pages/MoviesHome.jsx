@@ -38,12 +38,6 @@ const MoviesHome = () => {
                 <p className="director"> Year: {movie.year}</p>
                 <p className="director"> Director: {movie.director}</p>
                 <p className="director"> Description: {movie.description}</p>
-                <ReusableButton
-                  size="l"
-                  color="yellow"
-                  text="VER MÁS"
-                  className="verMas"
-                ></ReusableButton>
               </div>
             </div>
           );
@@ -53,7 +47,6 @@ const MoviesHome = () => {
           <h2>{error}</h2>
         </div>
       )}
-
     </div>
   );
 };
